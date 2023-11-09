@@ -5,3 +5,9 @@ export interface IEventDataCustomerUpdateAddress {
   nome: string;
   endereco: Address;
 }
+
+export interface IEventDataCreated {
+  id: string;
+  nome: string;
+  endereco: Address;
+}

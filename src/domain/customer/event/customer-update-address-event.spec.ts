@@ -1,5 +1,5 @@
 import CustomerUpdateAddressEvent from "./customer-update-address-event";
-import { customerUpdateAddressSeed } from "./seed/customerUpdateAddressSeed";
+import { customerUpdateAddressSeed } from "./seeds/customerUpdateAddressSeed";
 
 describe("Customer updated event unit test", () => {
   it("should create a instance of customer updated event with success", () => {

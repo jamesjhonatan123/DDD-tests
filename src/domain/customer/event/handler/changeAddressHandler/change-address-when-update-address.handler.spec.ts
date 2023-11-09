@@ -1,5 +1,5 @@
-import CustomerCreatedEvent from "../customer-created-event";
-import { customerUpdateAddressSeed } from "../seed/customerUpdateAddressSeed";
+import CustomerCreatedEvent from "../../customer-created-event";
+import { customerUpdateAddressSeed } from "../../seeds/customerUpdateAddressSeed";
 import { ChangeAddressWhenUpdateAddressHandler } from "./change-address-when-update-address.handler";
 describe("SendEmailWhenCustomerIsCreated handler unit test", () => {
   it("should execute the handler function when is call", () => {
