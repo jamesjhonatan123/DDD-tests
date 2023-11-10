@@ -1,5 +1,5 @@
-import EventHandlerInterface from "../../../@shared/event/event-handler.interface";
-import CustomerCreatedEvent from "../customer-created-event";
+import EventHandlerInterface from "../../../../@shared/event/event-handler.interface";
+import CustomerCreatedEvent from "../../customer-created-event";
 
 export class ConfirmEmailWhenCustomerIsCreatedHandler
   implements EventHandlerInterface<CustomerCreatedEvent>

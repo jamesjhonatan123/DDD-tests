@@ -5,21 +5,24 @@ describe("SendEmailWhenCustomerIsCreated handler unit test", () => {
   it("should execute the handler function when is call", () => {
     const sendEmailWhenCustomerIsCreatedHandler =
       new SendEmailWhenCustomerIsCreatedHandler();
-    sendEmailWhenCustomerIsCreatedHandler.handle = jest.fn();
+    const mockSendEmail = jest.spyOn(
+      sendEmailWhenCustomerIsCreatedHandler,
+      "handle"
+    );
     const event = new CustomerCreatedEvent(customerCreatedSeed);
     sendEmailWhenCustomerIsCreatedHandler.handle(event);
 
-    expect(sendEmailWhenCustomerIsCreatedHandler.handle).toBeCalledTimes(1);
-    expect(sendEmailWhenCustomerIsCreatedHandler.handle).toBeCalledWith(event);
+    expect(mockSendEmail).toBeCalledTimes(1);
+    expect(mockSendEmail).toBeCalledWith(event);
   });
 
   it("should print one console.log", () => {
     const logSpy = jest.spyOn(console, "log");
     const sendEmailWhenCustomerIsCreatedHandler =
       new SendEmailWhenCustomerIsCreatedHandler();
+
     const event = new CustomerCreatedEvent(customerCreatedSeed);
     sendEmailWhenCustomerIsCreatedHandler.handle(event);
-
     expect(logSpy).toBeCalled();
     expect(logSpy).toHaveBeenCalledWith(
       "Esse é o primeiro console.log do evento: CustomerCreated"

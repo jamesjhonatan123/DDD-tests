@@ -1,5 +1,5 @@
-import EventHandlerInterface from "../../../@shared/event/event-handler.interface";
-import CustomerUpdateAddressEvent from "../customer-update-address-event";
+import EventHandlerInterface from "../../../../@shared/event/event-handler.interface";
+import CustomerUpdateAddressEvent from "../../customer-update-address-event";
 
 export class ChangeAddressWhenUpdateAddressHandler
   implements EventHandlerInterface<CustomerUpdateAddressEvent>
